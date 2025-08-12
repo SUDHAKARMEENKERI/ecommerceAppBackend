@@ -1,9 +1,7 @@
 package controller;
 
 import errorHandling.ErrorResponse;
-import errorHandling.InvalidPasswordException;
 import errorHandling.UserNotFoundException;
-import io.swagger.v3.oas.annotations.Parameters;
 import model.UserLogin;
 import model.UserRegister;
 import model.UserResetPassword;

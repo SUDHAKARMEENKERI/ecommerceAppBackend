@@ -1,7 +1,6 @@
 package service;
 
 import dao.UserRegisterRepository;
-import model.UserLogin;
 import model.UserRegister;
 import model.UserResetPassword;
 import org.springframework.beans.factory.annotation.Autowired;
