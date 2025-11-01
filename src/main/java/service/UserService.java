@@ -29,7 +29,7 @@ public class UserService {
         user.setPhone(userRegister.getPhone());
         user.setPassword(userRegister.getPassword());
         user.setConfirm_password(userRegister.getConfirm_password());
-        user.setUserAddress(userRegister.getUserAddress());
+//        user.setUserAddress(userRegister.getUserAddress());
         return userRegisterRepository.save(user);
     }
 

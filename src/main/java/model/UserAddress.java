@@ -6,23 +6,23 @@ import jakarta.validation.constraints.NotBlank;
 
 @Embeddable
 public class UserAddress {
-    @NotBlank(message = "addressLine1 required")
-    @Column
+//    @NotBlank(message = "addressLine1 required")
+//    @Column
     private String addressLine1;
-    @Column
-    @NotBlank(message = "addressLine2 required")
+//    @Column
+//    @NotBlank(message = "addressLine2 required")
     private String addressLine2;
-    @Column
-    @NotBlank(message = "state required")
+//    @Column
+//    @NotBlank(message = "state required")
     private String state;
-    @Column
-    @NotBlank(message = "district required")
+//    @Column
+//    @NotBlank(message = "district required")
     private String district;
-    @Column
-    @NotBlank(message = "pinCode required")
+//    @Column
+//    @NotBlank(message = "pinCode required")
     private String pinCode;
-    @Column
-    @NotBlank(message = "street required")
+//    @Column
+//    @NotBlank(message = "street required")
     private String street;
 
     public String getAddressLine1() {

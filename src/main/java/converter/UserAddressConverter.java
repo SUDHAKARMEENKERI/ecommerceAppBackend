@@ -8,7 +8,7 @@ import model.UserAddress;
 
 import java.io.IOException;
 
-@Converter
+@Converter(autoApply = true)
 public class UserAddressConverter implements AttributeConverter<UserAddress, String> {
 
     private final ObjectMapper objectMapper = new ObjectMapper();

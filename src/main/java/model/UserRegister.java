@@ -41,11 +41,11 @@ public class UserRegister {
     )
     private String confirm_password;
 
-    @NotNull(message = "address required")
-    @Column(columnDefinition = "json")
-    @Valid
-    @Convert(converter = UserAddressConverter.class)
-    private UserAddress address;
+//    @NotNull(message = "address required")
+//    @Column(columnDefinition = "json")
+//    @Valid
+//    @Convert(converter = UserAddressConverter.class)
+//    private UserAddress address;
 
     public Long getId() {
         return id;
@@ -103,13 +103,13 @@ public class UserRegister {
         this.confirm_password = confirm_password;
     }
 
-    public UserAddress getUserAddress() {
-        return address;
-    }
+//    public UserAddress getUserAddress() {
+//        return address;
+//    }
 
-    public void setUserAddress(UserAddress userAddress) {
-        this.address = userAddress;
-    }
+//    public void setUserAddress(UserAddress userAddress) {
+//        this.address = userAddress;
+//    }
 
     @Override
     public String toString() {
@@ -121,7 +121,6 @@ public class UserRegister {
                 ", phone='" + phone + '\'' +
                 ", password='" + password + '\'' +
                 ", confirm_password='" + confirm_password + '\'' +
-                ", userAddress=" + address +
                 '}';
     }
 }
