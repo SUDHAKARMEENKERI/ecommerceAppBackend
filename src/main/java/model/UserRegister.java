@@ -31,13 +31,13 @@ public class UserRegister {
     @Column
     @Pattern(
             regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
-            message = "Password must contain uppercase, lowercase, digit, and special character"
+            message = "Password must contain uppercase, lowercase, digit, special character and length should be 8"
     )
     private String password;
     @Column
     @Pattern(
             regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
-            message = "Password must contain uppercase, lowercase, digit, and special character"
+            message = "Password must contain uppercase, lowercase, digit, special character and length should be 8"
     )
     private String confirm_password;
 

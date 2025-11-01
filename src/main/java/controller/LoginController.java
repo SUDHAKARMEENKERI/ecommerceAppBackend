@@ -1,7 +1,9 @@
 package controller;
 
 import errorHandling.ErrorResponse;
+import errorHandling.InvalidPasswordException;
 import errorHandling.UserNotFoundException;
+import io.swagger.v3.oas.annotations.Parameters;
 import model.UserLogin;
 import model.UserRegister;
 import model.UserResetPassword;
@@ -15,6 +17,7 @@ import service.UserLoginService;
 import java.util.HashMap;
 import java.util.Map;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("user")
 public class LoginController {

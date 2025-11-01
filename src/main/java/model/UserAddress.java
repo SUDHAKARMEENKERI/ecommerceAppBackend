@@ -11,7 +11,7 @@ public class UserAddress {
     private String addressLine1;
     @Column
     @NotBlank(message = "addressLine2 required")
-    private String getAddressLine2;
+    private String addressLine2;
     @Column
     @NotBlank(message = "state required")
     private String state;
@@ -33,12 +33,12 @@ public class UserAddress {
         this.addressLine1 = addressLine1;
     }
 
-    public String getGetAddressLine2() {
-        return getAddressLine2;
+    public String getAddressLine2() {
+        return addressLine2;
     }
 
-    public void setGetAddressLine2(String getAddressLine2) {
-        this.getAddressLine2 = getAddressLine2;
+    public void setAddressLine2(String addressLine2) {
+        this.addressLine2 = addressLine2;
     }
 
     public String getState() {
@@ -77,7 +77,7 @@ public class UserAddress {
     public String toString() {
         return "UserAddress{" +
                 "addressLine1='" + addressLine1 + '\'' +
-                ", getAddressLine2='" + getAddressLine2 + '\'' +
+                ", addressLine2='" + addressLine2 + '\'' +
                 ", state='" + state + '\'' +
                 ", district='" + district + '\'' +
                 ", pinCode='" + pinCode + '\'' +

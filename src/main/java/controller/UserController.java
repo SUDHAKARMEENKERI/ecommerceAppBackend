@@ -10,10 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import service.UserService;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/users")
 @Tag(name = "Users API", description = "Operations related to Users")
@@ -30,7 +32,12 @@ public class UserController {
 
     @Operation(summary = "Create a new user")
     @PostMapping
-    public ResponseEntity<UserRegister> createUser(@Valid @RequestBody UserRegister userRegister) {
+    public ResponseEntity<?> createUser(@Valid @RequestBody UserRegister userRegister) {
+        System.out.println("Hello =====11121212" + userRegister);
+        if(!userRegister.getPassword().equals(userRegister.getConfirm_password())){
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Passwords do not match");
+        }
+        System.out.println("Hello =====" + userRegister);
         return new ResponseEntity<UserRegister>(userService.createUsers(userRegister),HttpStatus.CREATED);
     }
 
