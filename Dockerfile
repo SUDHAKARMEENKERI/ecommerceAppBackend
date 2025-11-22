@@ -8,7 +8,7 @@ COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
 
-# Download dependencies (this step helps cache dependencies)
+# Download dependencies
 RUN ./mvnw dependency:go-offline
 
 # Copy the source code
@@ -22,11 +22,9 @@ FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
-# Copy the built JAR from the builder stage
-COPY --from=builder target/dictionaryApp-0.0.1-SNAPSHOT.jar app.jar
+# ✅ Correct path: copy from builder’s /app/target directory
+COPY --from=builder /app/target/dictionaryApp-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose the port your Spring Boot app listens on
 EXPOSE 9090
 
-# Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
