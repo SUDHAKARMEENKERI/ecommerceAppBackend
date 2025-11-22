@@ -23,7 +23,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 # Copy the built JAR from the builder stage
-COPY --from=builder /app/target/dictionaryApp-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=builder target/dictionaryApp-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port your Spring Boot app listens on
 EXPOSE 9090
